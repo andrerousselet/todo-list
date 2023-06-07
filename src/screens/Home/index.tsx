@@ -16,6 +16,20 @@ export function Home() {
           </View>
         </TouchableOpacity>
       </View>
+      <View style={styles.infoContainer}>
+        <View style={styles.todoInfo}>
+          <Text style={styles.createdText}>Criadas</Text>
+          <View style={styles.zeroDiv}>
+            <Text style={styles.textInfo}>0</Text>
+          </View>
+        </View>
+        <View style={styles.todoInfo}>
+          <Text style={styles.doneText}>Concluidas</Text>
+          <View style={styles.zeroDiv}>
+            <Text style={styles.textInfo}>0</Text>
+          </View>
+        </View>
+      </View>
     </View>
   );
 }
