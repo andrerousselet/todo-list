@@ -5,7 +5,11 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { styles } from "./styles";
 import { useFonts, Inter_400Regular } from "@expo-google-fonts/inter";
 
-export function TodoCard() {
+type TodoProps = {
+  text: string;
+};
+
+export function TodoCard({ text }: TodoProps) {
   const [isChecked, setChecked] = useState<boolean>(false);
   const [fontsLoaded] = useFonts({ Inter_400Regular });
 
@@ -21,9 +25,7 @@ export function TodoCard() {
         onValueChange={setChecked}
         color={isChecked ? "#5E60CE" : "#4EA8DE"}
       />
-      <Text style={styles.cardText}>
-        Integer urna interdum massa libero auctor neque turpis turpis semper.
-      </Text>
+      <Text style={styles.cardText}>{text}</Text>
       <Ionicons name="trash" size={22} color="#808080" />
     </View>
   );

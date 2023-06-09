@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     gap: 12,
     height: 64,
     justifyContent: "space-between",
+    marginBottom: 12,
     padding: 12,
   },
   cardCheckbox: {
