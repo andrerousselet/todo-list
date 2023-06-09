@@ -1,11 +1,17 @@
+import { useState } from "react";
 import { View, Text } from "react-native";
 import Checkbox from "expo-checkbox";
-import { styles } from "./styles";
-import { useState } from "react";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { styles } from "./styles";
+import { useFonts, Inter_400Regular } from "@expo-google-fonts/inter";
 
 export function TodoCard() {
   const [isChecked, setChecked] = useState<boolean>(false);
+  const [fontsLoaded] = useFonts({ Inter_400Regular });
+
+  if (!fontsLoaded) {
+    return null;
+  }
 
   return (
     <View style={styles.cardContainer}>

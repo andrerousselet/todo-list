@@ -1,8 +1,19 @@
 import { TextInput, View, TouchableOpacity, Text } from "react-native";
 import { styles } from "./styles";
 import { TodoCard } from "../../components/TodoCard";
+import {
+  useFonts,
+  Inter_400Regular,
+  Inter_700Bold,
+} from "@expo-google-fonts/inter";
 
 export function Home() {
+  const [fontsLoaded] = useFonts({ Inter_400Regular, Inter_700Bold });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.todoForm}>

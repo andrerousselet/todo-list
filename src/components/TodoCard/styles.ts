@@ -22,6 +22,7 @@ export const styles = StyleSheet.create({
   cardText: {
     color: "#F2F2F2",
     fontSize: 14,
+    fontFamily: "Inter_400Regular",
     flex: 1,
   }
 });

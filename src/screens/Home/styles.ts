@@ -65,13 +65,13 @@ export const styles = StyleSheet.create({
   },
   createdText: {
     color: "#4EA8DE",
+    fontFamily: "Inter_700Bold",
     fontSize: 14,
-    fontWeight: "700",
   },
   doneText: {
     color: "#8284FA",
+    fontFamily: "Inter_700Bold",
     fontSize: 14,
-    fontWeight: "700",
   },
   zeroDiv: {
     backgroundColor: "#333333",
@@ -81,7 +81,7 @@ export const styles = StyleSheet.create({
   },
   textInfo: {
     color: "#F2F2F2",
+    fontFamily: "Inter_700Bold",
     fontSize: 14,
-    fontWeight: "700",
   },
 });
