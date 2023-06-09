@@ -1,5 +1,6 @@
 import { TextInput, View, TouchableOpacity, Text } from "react-native";
 import { styles } from "./styles";
+import { TodoCard } from "../../components/TodoCard";
 
 export function Home() {
   return (
@@ -29,6 +30,9 @@ export function Home() {
             <Text style={styles.textInfo}>0</Text>
           </View>
         </View>
+      </View>
+      <View>
+        <TodoCard />
       </View>
     </View>
   );

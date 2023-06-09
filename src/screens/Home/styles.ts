@@ -55,8 +55,8 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingTop: 31,
     paddingBottom: 20,
-    borderBottomColor: "#333333",
-    borderBottomWidth: 1,
+    // borderBottomColor: "#333333",
+    // borderBottomWidth: 1,
   },
   todoInfo: {
     alignItems: "center",
