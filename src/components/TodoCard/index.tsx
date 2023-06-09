@@ -1,21 +1,16 @@
 import { useState } from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import Checkbox from "expo-checkbox";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { styles } from "./styles";
-import { useFonts, Inter_400Regular } from "@expo-google-fonts/inter";
 
 type TodoProps = {
   text: string;
+  onRemove: () => void;
 };
 
-export function TodoCard({ text }: TodoProps) {
+export function TodoCard({ text, onRemove }: TodoProps) {
   const [isChecked, setChecked] = useState<boolean>(false);
-  const [fontsLoaded] = useFonts({ Inter_400Regular });
-
-  if (!fontsLoaded) {
-    return null;
-  }
 
   return (
     <View style={styles.cardContainer}>
@@ -26,7 +21,9 @@ export function TodoCard({ text }: TodoProps) {
         color={isChecked ? "#5E60CE" : "#4EA8DE"}
       />
       <Text style={styles.cardText}>{text}</Text>
-      <Ionicons name="trash" size={22} color="#808080" />
+      <TouchableOpacity onPress={onRemove}>
+        <Ionicons name="trash" size={22} color="#808080" />
+      </TouchableOpacity>
     </View>
   );
 }
